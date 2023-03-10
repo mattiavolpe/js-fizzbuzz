@@ -33,7 +33,7 @@ containerElement.classList.add("container");
 rowElement.classList.add("row", "justify-content-center", "mb-5");
 
 headingElement.innerText = "FizzBuzz Game";
-headingElement.classList.add("display-1", "fw-bold", "text-center", "my-4");
+headingElement.classList.add("display-1", "fw-bold", "text-center", "my-4", "mx-auto");
 
 document.body.prepend(containerElement);
 containerElement.append(headingElement);
@@ -42,7 +42,7 @@ containerElement.append(rowElement);
 for (let i = 1; i <= 100; i++) {
 
   const colElement = document.createElement("div");
-  colElement.classList.add("col-5", "col-md-3", "ms_col_lg_1_10", "d-flex", "justify-content-center", "align-items-center", "fw-bold", "fs-5", "square");
+  colElement.classList.add("col-5", "col-md-3", "ms_col_lg_1_10", "d-flex", "justify-content-center", "align-items-center", "fw-bold", "fs-5", "circle");
 
   if (i % 3 === 0 && i % 5 === 0) {
     colElement.classList.add("fizzbuzz");
@@ -60,3 +60,24 @@ for (let i = 1; i <= 100; i++) {
   rowElement.append(colElement);
 
 }
+
+// TRYING TO CREATE THE ANIMATION CODE IN JS SINCE IT REQUIRES A 100 BREAKPOINTS
+const styleElement = document.createElement("style");
+styleElement.innerHTML = `@keyframes bounce {`;
+for (let percentage = 0; percentage <= 100; percentage++) {
+  if (percentage % 2 == 0) {
+    styleElement.innerHTML += `
+    ${percentage}% {
+      right: 4px;
+    }`
+  } else {
+    styleElement.innerHTML += `
+    ${percentage}% {
+      right: -4px;
+    }`
+  }
+}
+styleElement.innerHTML += `}`
+
+document.head.append(styleElement);
+console.log(styleElement);
