@@ -28,10 +28,13 @@ TOOLS
 const containerElement = document.createElement("div");
 const rowElement = document.createElement("div");
 const headingElement = document.createElement("h1");
+
 containerElement.classList.add("container");
-rowElement.classList.add("row", "justify-content-center");
+rowElement.classList.add("row", "justify-content-center", "mb-5");
+
 headingElement.innerText = "FizzBuzz Game";
-headingElement.classList.add("display-1", "fw-bold", "text-center", "my-4")
+headingElement.classList.add("display-1", "fw-bold", "text-center", "my-4");
+
 document.body.prepend(containerElement);
 containerElement.append(headingElement);
 containerElement.append(rowElement);

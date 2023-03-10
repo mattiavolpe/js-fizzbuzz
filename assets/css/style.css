@@ -1,24 +1,24 @@
 body {
   font-family: 'Mountains of Christmas', cursive;
-  background-color: cornflowerblue;
+  background-color: #f4a261;
 }
 
 .square {
   aspect-ratio: 1 / 1;
-  box-shadow: inset 0 0 0 10px cornflowerblue;
-  background-color: aqua;
+  box-shadow: inset 0 0 0 10px #f4a261;
+  background-color: #264653;
 }
 
 .fizz {
-  background-color: lightgreen;
+  background-color: #2a9d8f;
 }
 
 .buzz {
-  background-color: gold;
+  background-color: #e9c46a;
 }
 
 .fizzbuzz {
-  background-color: orangered;
+  background-color: #e76f51;
 }
 
 @media screen and (min-width: 992px) {
