@@ -69,15 +69,15 @@ for (let percentage = 0; percentage <= 100; percentage++) {
     styleElement.innerHTML += `
     ${percentage}% {
       right: 4px;
-    }`
+    }`;
   } else {
     styleElement.innerHTML += `
     ${percentage}% {
       right: -4px;
-    }`
+    }`;
   }
 }
-styleElement.innerHTML += `}`
+styleElement.innerHTML += `}`;
 
 document.head.append(styleElement);
 console.log(styleElement);
