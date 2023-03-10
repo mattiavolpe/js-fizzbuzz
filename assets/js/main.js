@@ -25,16 +25,31 @@ TOOLS
 - console.log
 */
 
+const divElement = document.createElement("div");
+const rowElement = document.createElement("div");
+divElement.classList.add("container");
+rowElement.classList.add("row", "justify-content-center");
+document.body.prepend(divElement);
+divElement.append(rowElement);
+
 for (let i = 1; i <= 100; i++) {
 
+  const colElement = document.createElement("div");
+  colElement.classList.add("col-5", "col-md-3", "ms_col_lg_1_10", "d-flex", "justify-content-center", "align-items-center", "square");
+
   if (i % 3 === 0 && i % 5 === 0) {
-    console.log("FizzBuzz");
+    colElement.classList.add("fizzbuzz");
+    colElement.innerText = "FizzBuzz";
   } else if (i % 3 === 0) {
-    console.log("Fizz");
+    colElement.classList.add("fizz");
+    colElement.innerText = "Fizz";
   } else if (i % 5 === 0) {
-    console.log("Buzz");
+    colElement.classList.add("buzz");
+    colElement.innerText = "Buzz";
   } else {
-    console.log(i);
+    colElement.innerText = i;
   }
+
+  rowElement.append(colElement);
 
 }
