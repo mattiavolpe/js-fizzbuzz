@@ -25,17 +25,21 @@ TOOLS
 - console.log
 */
 
-const divElement = document.createElement("div");
+const containerElement = document.createElement("div");
 const rowElement = document.createElement("div");
-divElement.classList.add("container");
+const headingElement = document.createElement("h1");
+containerElement.classList.add("container");
 rowElement.classList.add("row", "justify-content-center");
-document.body.prepend(divElement);
-divElement.append(rowElement);
+headingElement.innerText = "FizzBuzz Game";
+headingElement.classList.add("display-1", "fw-bold", "text-center", "my-4")
+document.body.prepend(containerElement);
+containerElement.append(headingElement);
+containerElement.append(rowElement);
 
 for (let i = 1; i <= 100; i++) {
 
   const colElement = document.createElement("div");
-  colElement.classList.add("col-5", "col-md-3", "ms_col_lg_1_10", "d-flex", "justify-content-center", "align-items-center", "square");
+  colElement.classList.add("col-5", "col-md-3", "ms_col_lg_1_10", "d-flex", "justify-content-center", "align-items-center", "fw-bold", "fs-5", "square");
 
   if (i % 3 === 0 && i % 5 === 0) {
     colElement.classList.add("fizzbuzz");
