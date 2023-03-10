@@ -6,8 +6,9 @@ body {
 .circle {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  border: 10px solid #f4a261;
   background-color: #264653;
+  box-shadow: 0 0 10px 1px #000000aa;
+  transform: scale(0.9);
 }
 
 .fizz {

@@ -34,6 +34,7 @@ rowElement.classList.add("row", "justify-content-center", "mb-5");
 
 headingElement.innerText = "FizzBuzz Game";
 headingElement.classList.add("display-1", "fw-bold", "text-center", "my-4", "mx-auto");
+headingElement.style.textShadow = "5px 10px 6px #000000aa";
 
 document.body.prepend(containerElement);
 containerElement.append(headingElement);
